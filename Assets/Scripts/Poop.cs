@@ -7,6 +7,7 @@ public class Poop : MonoBehaviour {
 
     void Start() {
         dropTime = Time.time;
+        GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-360f, 260f);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
