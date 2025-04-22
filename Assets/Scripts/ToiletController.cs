@@ -8,8 +8,6 @@ public class ToiletController : MonoBehaviour {
     public float leftBoundary = -3.3f;
     public float rightBoundary = 3.3f;
 
-    private int score = 0;
-
     void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -29,8 +27,7 @@ public class ToiletController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Poop")) {
             Destroy(other.gameObject);
-            score++;
-            Debug.Log("💩 接住了大便！得分：" + score);
+            ScoreManager.Instance.AddScore(1);
         }
     }
 }

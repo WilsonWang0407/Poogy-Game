@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000003db0f6cd
+  m_ApplyToSortingLayers: 000000003db0f6cd2198250a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2188,9 +2188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267f1735c9b7b447097f607e7ce69155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2.5
   leftBoundary: -3.3
-  rightBoundary: 3.5
+  rightBoundary: 3.3
 --- !u!1 &999917179
 GameObject:
   m_ObjectHideFlags: 0
