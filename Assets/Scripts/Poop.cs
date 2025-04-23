@@ -14,13 +14,12 @@ public class Poop : MonoBehaviour {
         if (isSettled) return;
         if (Time.time - dropTime < 0.1f) return;
 
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Poop")) {
+        if (collision.gameObject.CompareTag("Ground")) {
             isSettled = true;
 
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.linearVelocity = Vector2.zero;
-            rb.bodyType = RigidbodyType2D.Kinematic;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb.angularVelocity = 0f;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
             Invoke("Disappear", lifetime);
         }
